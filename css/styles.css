@@ -28,4 +28,6 @@ body {
 
 .About {
   text-align: center;
+  background-image: url("img_Bacon-Pizza.jpg");
+    background-repeat: no-repeat;
 }
