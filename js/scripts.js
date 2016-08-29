@@ -7,10 +7,10 @@ function User(){
   this.address = [];
   this.allAddress= [];
 }
-function Pizza(size,toppings,id){
+function Pizza(size, toppings, id){
   this.pizzaSize = size;
   this.toppings = toppings;
-  this.price = 0;
+  this.cost = 0;
   this.pizzaId = id;
 }
 
@@ -31,32 +31,32 @@ User.prototype.checkUserInputAmount = function(){
   else return true;
 }
 User.prototype.addTotal = function(){
-  this.total += this.pizzas[this.pizzas.length-1].price;
+  this.total += this.pizzas[this.pizzas.length-1].cost;
 }
 
 User.prototype.orderPizza = function(){
   if(this.pizzas.length === this.howMany) return true;
   else return false;
 }
-User.prototype.reOrder = function(){
+User.prototype.orderNow = function(){
   this.userName = "";
   this.howMany = 0;
   this.pizzas = [];
   this.total = 0;
   this.address = [];
-  this.fullAddressString = [];
+  this.allAddress = [];
 }
 
-Pizza.prototype.calculateCost = function(){
-  this.price = 10;
+Pizza.prototype.addCost = function(){
+  this.cost = 10;
   if(this.pizzaSize === "Medium"){
-    this.price+=2;
+    this.cost+=2;
   }
   else if (this.pizzaSize === "Large"){
-    this.price+=4;
+    this.cost+=4;
   }
   for (var i = 1; i < this.toppings.length; i++) {
-    this.price++;
+    this.cost++;
   }
 }
 
@@ -73,9 +73,9 @@ Pizza.prototype.addToList = function(){
     $("#pizza-box").show();
   }
   if(!this.toppings.length)
-  $("#pizza-list").append("<li class='temp-pizza' id='temp-pizza" + this.pizzaId + "'>" + this.pizzaSize +  " plain cheese " + " $" + this.price + ".00" +"</li><br>");
+  $("#pizza-list").append("<li class='temp-pizza' id='temp-pizza" + this.pizzaId + "'>" + this.pizzaSize +  " plain cheese " + " $" + this.cost + ".00" +"</li><br>");
   else{
-    $("#pizza-list").append("<li class='temp-pizza' id='temp-pizza" + this.pizzaId + "'>" + this.pizzaSize +  " " + this.toppings.length + " topping " + " $" + this.price + ".00" +"</li>");
+    $("#pizza-list").append("<li class='temp-pizza' id='temp-pizza" + this.pizzaId + "'>" + this.pizzaSize +  " " + this.toppings.length + " topping " + " $" + this.cost + ".00" +"</li>");
     $("#temp-pizza"+ this.pizzaId).append("<br>Toppings:<ul id=toppings" + this.pizzaId + "></ul>");
     for (var i = 0; i < this.toppings.length; i++) {
       $("#toppings"+ this.pizzaId).append("<li>" + this.toppings[i] + "</li>");
@@ -140,8 +140,8 @@ $(document).ready(function() {
       return;
     }
     myuser.address[0] = myAddress;
-    myuser.fullAddressString[0] = myuser.address[0].street + " " + myuser.address[0].city + ", " + myuser.address[0].state + ", " + myuser.address[0].zip;
-    alert("Your pizza(s) wil arrive at "+ myuser.fullAddressString +" in 30 min. Thank you for your order " + myuser.userName + " we appreciate your business!");
+    myuser.allAddress[0] = myuser.address[0].street + " " + myuser.address[0].city + ", " + myuser.address[0].state + ", " + myuser.address[0].zip;
+    alert("Your pizza(s) wil arrive at "+ myuser.allAddress +" in 30 min. Thank you for your order " + myuser.userName + " we appreciate your business!");
     $(".temp-pizza").remove();
     $(this).hide();
     $("#user").show();
