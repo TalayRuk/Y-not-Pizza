@@ -7,7 +7,7 @@ _**By Vichitra Pool (Note) on August 26th, 2016_
 
 ## Description
 
-##### _Create a website for a pizza company where a user can choose can choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, etc) and a size to order a pizza and see the final cost._
+##### _Create a website for a pizza company where a user can choose can choose one or more individual toppings (cheese, pepperoni, bacon, cheese, etc) or different type of specialty pizza and a size to order a pizza and see the final cost._
 - _Allow the user to choose toppings and size for the pizza they'd like to order._
 - _Create a pizza object constructor with properties for toppings and size._
 - _Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this._
@@ -25,13 +25,12 @@ _**By Vichitra Pool (Note) on August 26th, 2016_
 |When user select the size of pizza, it will show base price per pizza's size | 10" Single | $12.00
 |When user select the size of pizza, it will show base price per pizza's size | 14" Couple | $15.00
 |When user select the size of pizza, it will show base price per pizza's size | 18" family of 4 | $18.00
-|When user select pizza's topping, the price of $1.00 will be added for each topping | pepperoni | $1.00 added
-|When user select more than 1 pizza's toppings, the price will show the total charge for the toppings | pepperoni & extra cheese | $2.00 added
+|When user select pizza's topping, the price of $1.00 will be added for each topping | pepperoni | add $1.00
 |When user select the type of specialty pizza, the price will show base on the size | a small Thai pizza | $15.00
 |When user choose the quantity of pizza, the total price will show | 1 | Total $12.00
 
 ## Setup/Installation Requirements
-1. Copy Talayruk.github.io/Pizza to web browser or [click here to open.](http://Talayruk.github.io/Pizza)
+1. Copy Talayruk.github.io/Y-not-Pizza to web browser or [click here to open.](http://Talayruk.github.io/Y-not-Pizza)
 2. Open Y not Pizza! webpage.
 
 ## Known Bugs
