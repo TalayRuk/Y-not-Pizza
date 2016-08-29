@@ -1,0 +1,18 @@
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	background: url('../img/background.jpg') no-repeat 0 0;
+	background-size: cover;
+}
+
+.jumbotron,
+.panel {
+	background-color: rgba(238, 238, 238, 0.7);
+}
+
+.caption {
+	white-space: nowrap;
+}
