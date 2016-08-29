@@ -25,12 +25,11 @@ body {
   color: black;
 }
 
-.page-header {
-  background-image: url('../img/pizza-banner.jpg');
-  background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
+.jumbotron {
+  padding: 0px;
+}
+.jumbotron img {
+  width: 100%;
 }
 
 .customer {
@@ -54,6 +53,6 @@ form#new-customer {
 .About {
   display: none;
   text-align: center;
-  background-image: url("img_Bacon-Pizza.jpg");
+  background-image: url("../img/Bacon-Pizza.jpg");
   background-repeat: no-repeat;
 }

@@ -10,7 +10,7 @@ function Address(street, city, state){
   this.state = state
 }
 
-Contact.prototype.fullName = function() {
+User.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }
 
