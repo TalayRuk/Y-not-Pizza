@@ -25,7 +25,7 @@ body {
   color: black;
 }
 
-#banner {
+.page-header {
   background-image: url('../img/pizza-banner.jpg');
   background-size:contain;
   background-position: center;
