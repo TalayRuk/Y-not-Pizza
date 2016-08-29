@@ -25,8 +25,7 @@ _**By Vichitra Pool (Note) on August 26th, 2016_
 |When user select the size of pizza, it will show base price per pizza's size | 10" Single | $12.00
 |When user select the size of pizza, it will show base price per pizza's size | 14" Couple | $15.00
 |When user select the size of pizza, it will show base price per pizza's size | 18" family of 4 | $18.00
-|When user select pizza's topping, the price of $1.00 will be added for each topping | pepperoni | $1.00 added
-|When user select more than 1 pizza's toppings, the price will show the total charge for the toppings | pepperoni & extra cheese | $2.00 added
+|When user select pizza's topping, the price of $1.00 will be added for each topping | pepperoni | add $1.00
 |When user select the type of specialty pizza, the price will show base on the size | a small Thai pizza | $15.00
 |When user choose the quantity of pizza, the total price will show | 1 | Total $12.00
 

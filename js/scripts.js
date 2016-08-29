@@ -38,7 +38,7 @@ User.prototype.orderPizza = function(){
   if(this.pizzas.length === this.howMany) return true;
   else return false;
 }
-User.prototype.orderNow = function(){
+User.prototype.orderAgain = function(){
   this.userName = "";
   this.howMany = 0;
   this.pizzas = [];
@@ -48,12 +48,12 @@ User.prototype.orderNow = function(){
 }
 
 Pizza.prototype.addCost = function(){
-  this.cost = 10;
+  this.cost = 12;
   if(this.pizzaSize === "Medium"){
-    this.cost+=2;
+    this.cost+=3;
   }
   else if (this.pizzaSize === "Large"){
-    this.cost+=4;
+    this.cost+=3;
   }
   for (var i = 1; i < this.toppings.length; i++) {
     this.cost++;
@@ -86,7 +86,7 @@ Pizza.prototype.addToList = function(){
 
 var clearFields = function(){
   $("#name").val("");
-  $("#pizza-amount").val(1);
+  $("#howMany").val(1);
   $("#street").val("");
   $("#city").val("");
   $("#state").val("");
@@ -97,16 +97,16 @@ $(document).ready(function() {
   var myuser = new user();
   $("form#user").submit(function(event){
     event.preventDefault();
-    myuser.userName = $("#name").val();
+    myuser.userName = $("#name").val().toUpperCase;
     myuser.howMany = parseInt($("#pizza-amount").val());
     if(!myuser.checkUserInputName()){
       alert("Please enter your name");
       return;
     }
-    if(!myuser.checkUserInputAmount()){
-      alert("You can't order 0 or a negative number of pizzas");
-      return;
-    }
+    // if(!myuser.checkUserInputAmount()){
+    //   alert("You can't order 0 or a negative number of pizzas");
+    //   return;
+    // }
     $(this).hide();
     $("#pizza").show();
   });
@@ -122,7 +122,7 @@ $(document).ready(function() {
     myPizza.calculateCost();
     myPizza.addToList();
     myuser.calculatetotal();
-    if(myuser.amIDoneOrdering()){
+    if(myuser.orderPizza()){
       $(this).hide();
       $("#total").text("Your total is $" + myuser.total + ".00");
       $("#order").show();
@@ -148,32 +148,10 @@ $(document).ready(function() {
     $("#main-column").addClass("col-sm-12");
     $("#main-column").removeClass("col-sm-7");
     $("#pizza-box").hide();
-    myuser.reOrder();
+    myuser.orderAgain();
     clearFields();
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
