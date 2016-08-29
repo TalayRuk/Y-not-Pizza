@@ -24,13 +24,18 @@ body {
 .change-color {
   color: black;
 }
-
+/*.container .jumbotron {
+  padding-top:
+}*/
 .jumbotron {
   padding: 0px;
   margin: 5px;
+
 }
 .jumbotron img {
+  height: 15%;
   width: 100%;
+
 
 }
 
