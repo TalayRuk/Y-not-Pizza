@@ -31,7 +31,7 @@ _**By Vichitra Pool (Note) on August 26th, 2016_
 |When user choose the quantity of pizza, the total price will show | 1 | Total $12.00
 
 ## Setup/Installation Requirements
-1. Copy Talayruk.github.io/Pizza to web browser or [click here to open.](http://Talayruk.github.io/Pizza)
+1. Copy Talayruk.github.io/Y-not-Pizza to web browser or [click here to open.](http://Talayruk.github.io/Y-not-Pizza)
 2. Open Y not Pizza! webpage.
 
 ## Known Bugs
