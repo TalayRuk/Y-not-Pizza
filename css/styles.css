@@ -25,6 +25,14 @@ body {
   color: black;
 }
 
+#banner {
+  background-image: url('../img/pizza-banner.jpg');
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
 .customer {
   text-align: center;
   margin-left: 30%;
