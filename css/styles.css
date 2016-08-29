@@ -12,6 +12,9 @@ body {
   width: 100%;
   height: 25%;
 }
+.carousel-inner h2 {
+  color: black;
+}
 .page-header {
   text-align: center;
   color: white;
