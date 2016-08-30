@@ -106,6 +106,9 @@
             <label for="new-last-name">Last name</label>
             <input type="text" class="form-control" id="new-last-name">
           </div>
+          <p class="warning">
+
+          </p>
           <div id="new-addresses">
             <div class="new-address">
               <div class="form-group">
@@ -124,9 +127,11 @@
                 <label for="new-zip">Zip Code</label>
                 <input type="number" min=0 class="form-control new-zip">
               </div>
+                <p id="warning">
+
+                </p>
             </div>
           </div>
-        </form>
           <!-- User Info End, Pizza choice start -->
         <h2>Choose from our Specialty Pizza: </h2>
         <div class="new-pizza">
@@ -249,27 +254,46 @@
               <h4>Choose one Opton:</h4>
               <div class="radio-inline">
                 <label>
-                  <input type="radio" name="carry/deliver"  value="0" >CarryOut
+                  <input type="radio" name="carry-deliver"  value="0" >CarryOut
                 </label>
               </div>
               <div class="radio-inline">
                 <label>
-                  <input type="radio" name="carry/deliver"  value="0">Free Delivery (Please Tip the Driver!)
+                  <input type="radio" name="carry-deliver"  value="0">Free Delivery (Please Tip the Driver!)
                 </label>
               </div>
             </div>
           </div>
         </div>
+
         <button type="submit" class="btn btn-primary btn-lg" id="order">Order</button>
+        </form>
+
+        <div class="totalPrice">
+          <h2>Customer Order Detail: </h2>
+          <ul id="customer">
+
+          </ul>
+        <div id="show-info">
+           <h2></h2>
+           <p> Address:</p>
+           <ul id="addresses">
+
+           </ul>
+           <h4>Here's the total price for your pizza $ <span class="total"></span></h4>
+           <br>
+           <h4>Enjoy! and Thank you for your business.</h4>
+         </div>
+        </div>
     </div>
   </div>
+  </body>
+</html>
 
-  <div class="Menu">
 
-  </div>
 
-  <div class="Order">
-
+  <!-- <div class="Menu">
+    <img src="pizza-menu" alt="menu" />
   </div>
 
   <div class="About">
@@ -295,6 +319,3 @@
     <h4>email: YnotPizza!@pizzaco.com</h4>
     <h5>#YnotPizza</h5>
   </div>
-
-  </body>
-</html>

@@ -78,9 +78,14 @@ body {
   text-align: center;
   align-items: center;
 }
-.About {
+
+p .warning {
+  color: black;
+  background-color: limegreen;
+}
+/*.About {
   display: none;
   text-align: center;
   background-image: url("../img/Bacon-Pizza.jpg");
   background-repeat: no-repeat;
-}
+}*/
