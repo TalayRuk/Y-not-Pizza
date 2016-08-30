@@ -55,11 +55,13 @@ body {
   color: black;
   text-align: center;
   font-size: 18px;
-  background-color: yellow;
+  background-color: #ffff99;
 }
 
 .form-group h4 {
   padding: 10px;
+  font-weight: bolder;
+  text-shadow: 2px 2px white;
 }
 
 .radio-inline {
