@@ -48,7 +48,6 @@ body {
 
 .row {
   color: black;
-  text-align: center;
   margin: 20px;
 }
 
@@ -56,6 +55,11 @@ body {
   color: black;
   text-align: center;
   font-size: 18px;
+  background-color: yellow;
+}
+
+.form-group h4 {
+  padding: 10px;
 }
 
 .radio-inline {
@@ -64,6 +68,7 @@ body {
 
 .radio-inline img {
   width: 35%;
+  padding: 10px;
 }
 .About {
   display: none;
