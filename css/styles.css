@@ -64,6 +64,9 @@ body {
   text-shadow: 2px 2px white;
 }
 
+.col-header {
+  margin-top: 43px;
+}
 .radio-inline {
   font-size: 16px;
 }

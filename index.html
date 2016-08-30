@@ -120,11 +120,15 @@
                 <label for="new-state">State</label>
                 <input type="text" class="form-control new-state">
               </div>
+              <div class="form-group">
+                <label for="new-zip">Zip Code</label>
+                <input type="number" min=0 class="form-control new-zip">
+              </div>
             </div>
           </div>
         </form>
           <!-- User Info End, Pizza choice start -->
-        <h2>Create Your Own Pizza Or Choose Specialty: </h2>
+        <h2>Choose from our Specialty Pizza: </h2>
         <div class="new-pizza">
           <div class="form-group" id="new-specialty">
             <h4>Choose Your Specialty Pizza: </h4>
@@ -133,53 +137,66 @@
                 <input type="radio" id="blini">Blini Smoked Salmon Pizza
                 <img src="img/Blini-Pizza.jpg" alt="Salmon Pizza" />
               </label>
+
+
               <label class="radio-inline">
                 <input type="radio" id="thai">Spicy Thai's Peanut Pizza
                 <img src="img/Thai pizza.jpg" alt="spicy pizza" />
               </label>
+
+
               <label class="radio-inline">
                 <input type="radio" id="banhMi">Vietnamese Bannh Mi Pizza
                 <img src="img/Banh-Pizza.jpg" alt="vietnamese pizza" />
               </label>
+
+
               <label class="radio-inline">
                 <input type="radio" id="baconBlue">Bacon and Bluecheese Pizza
                 <img src="img/Bacon-Pizza.jpg" alt="pig &amp; cheese pizza" />
               </label>
+
+
               <label class="radio-inline">
                 <input type="radio" id="dessert">Rainbow Fruit Dessert Pizza
                 <img src="img/Dessert-Pizza.jpg" alt="dessert pizza" />
               </label>
-            </form>
+            </div>
           </div>
         </div>
       </div>
+        <h2 class="col-header">Create Your Own Pizza:</h2>
         <div class="new-pizza">
           <div class="col-sm-6">
             <div class="form-group" id="new-size">
               <h4>Choose Your Size:</h4>
-              <form >
-                <label class="radio-inline">
+              <div class="radio-inline">
+                <label>
                   <input type="radio" id="opt-small">10" Small $12.00
                 </label>
-                <label class="radio-inline">
+              </div>
+              <div class="radio-inline">
+                <label>
                   <input type="radio" id="opt-medium">14" Medium $15.00
                 </label>
-                <label class="radio-inline">
+              </div>
+              <div class="radio-inline">
+                <label>
                   <input type="radio" id="opt-large">18" Large $18.00
                 </label>
-              </form>
+              </div></form>
             </div>
             <div class="form-group" id="new-sauce">
               <h4>Choose Your Sauce</h4>
               <form>
                 <label class="checkbox-inline" for="marinara">
-                  <input type="checkbox" id="marinara" value="1">Marinara
+                  <input type="checkbox" id="marinara" value="0">Marinara
                 </label>
                 <label class="checkbox-inline" for="alfredo">
-                  <input type="checkbox" id="alfredo" value="1">Alfredo
+                  <input type="checkbox" id="alfredo" value="0">Alfredo
                 </label>
                 <label class="checkbox-inline" for="spicy">
-                  <input type="checkbox" id="spicy" value="1">Spicy
+                  <input type="checkbox" id="spicy" value="0">Spicy
                 </label>
               </form>
             </div>
@@ -206,9 +223,8 @@
                 </label>
               </form>
             </div>
-            <div class="form-group" id="new-veggieToppings">
+            <div class="checkbox" id="new-veggieToppings">
               <h4>Choose Your Topping</h4>
-              <form>
                 <label class="checkbox-inline" for="mushroom">
                   <input type="checkbox" id="mushroom" value="1">Mushroom
                 </label>
@@ -230,18 +246,24 @@
                 <label class="checkbox-inline" for="basil">
                   <input type="checkbox" id="basil" value="1">Basil
                 </label>
-              </form>
             </div>
             <div class="form-group" id="new-getOrder">
               <h4>Choose one Opton:</h4>
-              <form >
-                <label class="radio-inline">
-                  <input type="radio" id="carryOut">CarryOut
+              <div class="radio-inline">
+                <label>
+                  <input type="radio" id="carryOut" value="0" >CarryOut
                 </label>
-                <label class="radio-inline">
-                  <input type="radio" id="delivery">Delivery add $5.00
+              </div>
+              <div class="radio-inline">
+                <label>
+                  <input type="radio" id="delivery" value="5" checked>Delivery add $5.00
                 </label>
-              </form>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="new-zip">Zip Code</label>
+              <input type="number" min=0 class="form-control new-zip">
             </div>
           </div>
         </div>
