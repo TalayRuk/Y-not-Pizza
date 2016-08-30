@@ -7,10 +7,11 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" ></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
-    <title>Y not Pizza!</title>
+    <title>Y-notPizza!!</title>
   </head>
   <body>
 
+  <div class="container page1">
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -19,12 +20,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Y not Pizza!</a>
+          <a class="navbar-brand" href="#">Y-notPizza!!</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li id= "clickMenu" ><a href="#">Menu</a></li>
-            <li><a href="#">Call 1800 Y not Pizza</a></li>
+            <li><a href="#">Call 1800 Y-notPizza!</a></li>
             <li class="active" id= "clickOrder"><a href="#">Order</a></li>
             <li><a href="#">Dine in</a></li>
             <li id= "clickAboutus"><a href="#">About us</a></li>
@@ -35,7 +36,7 @@
         </div>
       </div>
     </nav>
-
+<!-- nav-bar ended / carousel start -->
     <div id="carousel-pizza" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carousel-pizza" data-slide-to="0" class="active"></li>
@@ -70,60 +71,229 @@
         </div>
       </div>
     </div>
+    <!-- carousel contol  -->
     <a class="left carousel-control" href="#carousel-pizza" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
     <a class="right carousel-control" href="#carousel-pizza" role="button" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
-
+    <!-- carousel end -->
     <div class="page-header">
-      <h1 class="change-color">Y not PIZZA!</h1>
-      <h3>Always Fresh! Always Fast and Epically Always Delicious!</h3>
+      <h1 class="change-color">Y-notPizza!!</h1>
+      <h3>Always Fresh! Always Fast and Epicly Delicious!</h3>
       <h4>Y not Do Pizza! tonight. We are conveniencely located.</h4>
-      <h4>Stop by to Dine in, Carry out, or Delivery within 30 mins</h4>
+      <h4>Stop by to Dine in, Carry out, or Free Delivery within 30 mins</h4>
       <h4>You can make it your own pizza or try our specialty pizza!</h4>
-      <h3><strong class="change-color">To order for Carry out or Delivery please call us at 1800 Y not Pizza!
+      <h3><strong class="change-color">To order for Carry out or Delivery please call us at 1800 Y-notPizza!!
       <br>or click Order button below</strong></h3>
-      <button type="button" class="btn btn-success btn-lg">Let's Order!</button>
+      <button type="button" class="btn btn-success btn-lg" id="hungry">Hungry!</button>
     </div>
+  </div>
 
-  <div class="customer">
-    <form id="new-customer">
-      <div class="form-group">
-            <label for="new-first-name">Please Enter your First name</label>
-            <input type="text" class="form-control" id="new-first-name">
-      </div>
-      <div class="form-group">
-        <label for="new-last-name">Please Enter your Last name</label>
-        <input type="text" class="form-control" id="new-last-name">
-      </div>
-      <div id="new-addresses">
-        <div class="new-address">
+  <div class="page2">
+    <!-- banner img -->
+    <h1 class="jumbotron"><img src="img/pizza-banner.jpg" alt="Y-notPizza! tonight!" /></h1>
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>Please Enter Your Information: </h2>
+        <form id="new-customer">
           <div class="form-group">
-            <label for="new-street">Street</label>
-            <input type="text" class="form-control new-street">
+                <label for="new-first-name">First name</label>
+                <input type="text" class="form-control" id="new-first-name">
           </div>
           <div class="form-group">
-            <label for="new-city">City</label>
-            <input type="text" class="form-control new-city">
+            <label for="new-last-name">Last name</label>
+            <input type="text" class="form-control" id="new-last-name">
           </div>
-          <div class="form-group">
-            <label for="new-state">State</label>
-            <input type="text" class="form-control new-state">
+          <p class="warning">
+
+          </p>
+          <div id="new-addresses">
+            <div class="new-address">
+              <div class="form-group">
+                <label for="new-street">Street</label>
+                <input type="text" class="form-control new-street">
+              </div>
+              <div class="form-group">
+                <label for="new-city">City</label>
+                <input type="text" class="form-control new-city">
+              </div>
+              <div class="form-group">
+                <label for="new-state">State</label>
+                <input type="text" class="form-control new-state">
+              </div>
+              <div class="form-group">
+                <label for="new-zip">Zip Code</label>
+                <input type="number" min=0 class="form-control new-zip">
+              </div>
+                <p id="warning">
+
+                </p>
+            </div>
+          </div>
+          <!-- User Info End, Pizza choice start -->
+        <h2>Choose from our Specialty Pizza: </h2>
+        <div class="new-pizza">
+          <div class="form-group" id="new-specialty">
+            <h4>Choose Your Specialty Pizza ($8.00 per pizza): </h4>
+            <form >
+              <label class="checkbox-inline">
+                <input type="checkbox" name="specialty">Blini Smoked Salmon Pizza
+                <img src="img/Blini-Pizza.jpg" alt="Salmon Pizza" />
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" name="specialty">Spicy Thai's Peanut Pizza
+                <img src="img/Thai pizza.jpg" alt="spicy pizza" />
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" name="specialty">Vietnamese Bannh Mi Pizza
+                <img src="img/Banh-Pizza.jpg" alt="vietnamese pizza" />
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" name="specialty">Bacon and Bluecheese Pizza
+                <img src="img/Bacon-Pizza.jpg" alt="pig &amp; cheese pizza" />
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" name="specialty">Rainbow Fruit Dessert Pizza
+                <img src="img/Dessert-Pizza.jpg" alt="dessert pizza" />
+              </label>
+            </form>
           </div>
         </div>
       </div>
-      <button type="submit" class="btn">Order</button>
-    </form>
+        <h2 class="col-header">Create Your Own Pizza:</h2>
+        <div class="new-pizza">
+          <div class="col-sm-6">
+            <div class="form-group" id="new-size">
+              <h4>Choose Your Size:</h4>
+              <div class="radio-inline">
+                <label>
+                  <input type="radio" name="size" value="small" >10" Small $12.00
+                </label>
+              </div>
+              <div class="radio-inline">
+                <label>
+                  <input type="radio" name="size" value="medium">14" Medium $15.00
+                </label>
+              </div>
+              <div class="radio-inline">
+                <label>
+                  <input type="radio" name="size" value="large">18" Large $18.00
+                </label>
+              </div>
+            </div>
+            <div class="form-group" id="new-sauce">
+              <h4>Choose Your Sauce (No extra charge)</h4>
+              <form>
+                <label class="checkbox-inline" for="marinara">
+                  <input type="checkbox" name="sauce" value="0">Marinara
+                </label>
+                <label class="checkbox-inline" for="alfredo">
+                  <input type="checkbox" name="sauce" value="0">Alfredo
+                </label>
+                <label class="checkbox-inline" for="spicy">
+                  <input type="checkbox" name="sauce" value="0">Spicy
+                </label>
+              </form>
+            </div>
+            <div class="form-group" id="new-toppings">
+              <h4>Choose Your Topping ($1.00 per Topping)</h4>
+              <form>
+                <label class="checkbox-inline" for="pepperoni">
+                  <input type="checkbox" name="toppings" value="1">Pepperoni
+                </label>
+                <label class="checkbox-inline" for="italianSausage">
+                  <input type="checkbox" name="toppings" value="1">Italian Sausage
+                </label>
+                <label class="checkbox-inline" for="bacon">
+                  <input type="checkbox" name="toppings" value="1">baconname="toppings"
+                </label>
+                <label class="checkbox-inline" for="chicken">
+                  <input type="checkbox" name="toppings" value="1">Chicken
+                </label>
+                <label class="checkbox-inline" for="extra-cheese">
+                  <input type="checkbox" name="toppings" value="1">Extra Cheese
+                </label>
+                <label class="checkbox-inline" for="blue-cheese">
+                  <input type="checkbox" name="toppings" value="1">Blue Cheese
+                </label>
+              </form>
+            </div>
+            <div class="form-group" id="new-veggieToppings">
+              <h4>Choose Your Topping ($1.00 per Topping)</h4>
+                <label class="checkbox-inline" for="mushroom">
+                  <input type="checkbox" name="veggiesToppings" value="1">Mushroom
+                </label>
+                <label class="checkbox-inline" for="arugura">
+                  <input type="checkbox" name="veggiesToppings" value="1">Arugura
+                </label>
+                <label class="checkbox-inline" for="tomatoes">
+                  <input type="checkbox" name="veggiesToppings" value="1">Tomatoes
+                </label>
+                <label class="checkbox-inline" for="basil">
+                  <input type="checkbox" name="veggiesToppings" value="1">Basil
+                </label>
+                <label class="checkbox-inline" for="artichokes">
+                  <input type="checkbox" name="veggiesToppings" value="1">Artichokes
+                </label>
+                <label class="checkbox-inline" for="Garlic">
+                  <input type="checkbox" name="veggiesToppings" value="1">Garlic
+                </label>
+                <label class="checkbox-inline" for="basil">
+                  <input type="checkbox" name="veggiesToppings" value="1">Basil
+                </label>
+            </div>
+              <form>
+                <div class="form-group">
+                  <label for="quantity"><h4>Pizza Quantity: </h4></label>
+                  <input type="number" min=1 class="form-control quantity" placeholder="Please enter equal or more than 1">
+                </div>
+              </form>
+            <div class="form-group" id="new-getOrder">
+              <h4>Choose one Opton:</h4>
+              <div class="radio-inline">
+                <label>
+                  <input type="radio" name="carry-deliver"  value="0" >CarryOut
+                </label>
+              </div>
+              <div class="radio-inline">
+                <label>
+                  <input type="radio" name="carry-deliver"  value="0">Free Delivery (Please Tip the Driver!)
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" id="order">Order</button>
+        </form>
+
+        <div class="totalPrice">
+          <h2>Customer Order Detail: </h2>
+          <ul id="customer">
+
+          </ul>
+        <div id="show-info">
+           <h2></h2>
+           <p> Address:</p>
+           <ul id="addresses">
+
+           </ul>
+           <h4>Here's the total price for your pizza $ <span class="total"></span></h4>
+           <br>
+           <h4>Enjoy! and Thank you for your business.</h4>
+         </div>
+        </div>
+    </div>
   </div>
+  </body>
+</html>
 
-  <div class="Menu">
 
-  </div>
 
-  <div class="Order">
-
+  <!-- <div class="Menu">
+    <img src="pizza-menu" alt="menu" />
   </div>
 
   <div class="About">
@@ -145,10 +315,7 @@
     <br>
     <h4>Come visit us at 123 4th Ave, Pizza, Pizza USA 91123</h4>
     <h4>Hours: Open Mon - Sun: 11AM - MIDNIGHT</h4>
-    <h4>Call us 1800 Y not Pizza</h4>
+    <h4>Call us 1800 Y-notPizza!</h4>
     <h4>email: YnotPizza!@pizzaco.com</h4>
     <h5>#YnotPizza</h5>
   </div>
-
-  </body>
-</html>
