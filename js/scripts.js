@@ -16,10 +16,11 @@ User.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }
 
-function Pizza(specialty, size, toppings, quantity) {
+function Pizza(specialty, size, toppings, veggiesToppings, quantity) {
   this.specialty = specialty;
   this.size = size;
   this.toppings = toppings;
+  this.veggiesToppings = veggiesToppings;
   this.quantity = quantity;
   this.price = 0;
 }
@@ -27,6 +28,7 @@ function Pizza(specialty, size, toppings, quantity) {
 Pizza.prototype.totalCost = function () {
   var price = 12
   var toppingCost= 1 * this.toppings;
+  var veggiesCost= 1 * this.veggiesToppings;
   var specialtyCost= 5 * this.specialty;
 
   if(this.size === "medium") {
@@ -45,7 +47,7 @@ Pizza.prototype.totalCost = function () {
     $("input#new-specialty").attr("checked", false);
     $("input#new-size").attr("checked", false);
     $("input#new-sauce").attr("checked", false);
-    $("input#new-topping").attr("checked", false);
+    $("input#new-toppings").attr("checked", false);
 
   }
 
