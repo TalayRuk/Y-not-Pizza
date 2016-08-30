@@ -62,6 +62,9 @@ body {
   font-size: 16px;
 }
 
+.radio-inline img {
+  width: 35%;
+}
 .About {
   display: none;
   text-align: center;
