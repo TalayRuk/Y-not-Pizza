@@ -32,6 +32,7 @@ body {
 }
 
 .page2 {
+  display:none;
   color: black;
   text-align: center;
 }

@@ -61,7 +61,12 @@ Pizza.prototype.totalCost = function () {
   }
 
 $(function() {
-  $(".form-group").submit(function(event) {
+  $("#hungry").click(function(){
+    $(".page1").hide();
+    $(".page2").show();
+  });
+
+  $(".form-group #order").submit(function(event) {
     event.preventDefault();
 
     var inputtedFirstName = $("input#new-first-name").val().toUpperCase();
