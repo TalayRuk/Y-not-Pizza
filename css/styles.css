@@ -71,9 +71,11 @@ body {
   font-size: 16px;
 }
 
-.radio-inline img {
+.checkbox-inline img {
   width: 35%;
   padding: 10px;
+  text-align: center;
+  align-items: center;
 }
 .About {
   display: none;

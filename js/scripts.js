@@ -1,23 +1,25 @@
 // Backend Logic
-function User() {
-  this.userName = "";
+function Customer(first, last) {
+  this.firstName = first;
+  this.lastName = last;
   this.address = [];
 }
 
-function Address(street, city, state){
+function Address(street, city, state,zip){
   this.street = street;
   this.city = city;
-  this.state = state
+  this.state = state;
+  this.zip = zip;
 }
 
 User.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }
 
-function Pizza(size, toppings, specialty, quantity) {
+function Pizza(specialty, size, toppings, quantity) {
+  this.specialty = specialty;
   this.size = size;
   this.toppings = toppings;
-  this.specialty = specialty;
   this.quantity = quantity;
   this.price = 0;
 }
@@ -40,11 +42,27 @@ Pizza.prototype.totalCost = function () {
 };
 
   function resetFields() {
-    $("#name")
+    $("input#new-specialty").attr("checked", false);
+    $("input#new-size").attr("checked", false);
+    $("input#new-sauce").attr("checked", false);
+    $("input#new-topping").attr("checked", false);
+
   }
 
 $(function() {
+  $("form#new-contact").submit(function(event) {
+    event.preventDefault();
 
+    var inputtedFirstName = $("input#new-first-name").val();
+    var inputtedLastName = $("input#new-last-name").val();
+
+    var newContact = new Contact(inputtedFirstName, inputtedLastName);
+
+    $("input#new-first-name").val("");
+    $("input#new-last-name").val("");
+    $("input.new-street").val("");
+    $("input.new-city").val("");
+    $("input.new-state").val("");
   $("#clickOrder").click(function() {
     $(".About").hide();
   });

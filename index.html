@@ -138,7 +138,7 @@
                 <img src="img/Blini-Pizza.jpg" alt="Salmon Pizza" />
               </label>
               <label class="checkbox-inline">
-                <input type="radio" id="thai">Spicy Thai's Peanut Pizza
+                <input type="checkbox" id="thai">Spicy Thai's Peanut Pizza
                 <img src="img/Thai pizza.jpg" alt="spicy pizza" />
               </label>
               <label class="checkbox-inline">
@@ -174,7 +174,7 @@
               </div>
               <div class="radio-inline">
                 <label>
-                  <input type="radio" id="opt-large" value="large" checked>18" Large $18.00
+                  <input type="radio" id="opt-large" value="large">18" Large $18.00
                 </label>
               </div>
             </div>
@@ -215,7 +215,7 @@
                 </label>
               </form>
             </div>
-            <div class="checkbox" id="new-veggieToppings">
+            <div class="form-group" id="new-veggieToppings">
               <h4>Choose Your Topping</h4>
                 <label class="checkbox-inline" for="mushroom">
                   <input type="checkbox" id="mushroom" value="1">Mushroom
@@ -239,6 +239,12 @@
                   <input type="checkbox" id="basil" value="1">Basil
                 </label>
             </div>
+              <form>
+                <div class="form-group">
+                  <label for="quantity"><h4>Pizza Quantity: </h4></label>
+                  <input type="number" min=1 class="form-control Quantity" placeholder="Please enter equal or more than 1">
+                </div>
+              </form>
             <div class="form-group" id="new-getOrder">
               <h4>Choose one Opton:</h4>
               <div class="radio-inline">
@@ -252,13 +258,9 @@
                 </label>
               </div>
             </div>
-
-            <div class="form-group">
-              <label for="new-zip">Zip Code</label>
-              <input type="number" min=0 class="form-control new-zip">
-            </div>
           </div>
         </div>
+        <button type="button" class="btn btn-primary btn-lg">Order</button>
     </div>
   </div>
 
