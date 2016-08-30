@@ -31,21 +31,16 @@ body {
 .jumbotron {
   padding: 0px;
   margin: 5px;
-
 }
 .jumbotron img {
   height: 15%;
   width: 100%;
-
-
 }
 
-.order-page {
+.row {
   color: black;
   text-align: center;
   margin: 20px;
-}
-
 }
 
 .form-group {
