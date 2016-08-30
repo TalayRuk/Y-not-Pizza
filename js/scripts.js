@@ -29,7 +29,7 @@ Pizza.prototype.totalCost = function () {
   var price = 12
   var toppingCost= 1 * this.toppings;
   var veggiesCost= 1 * this.veggiesToppings;
-  var specialtyCost= 5 * this.specialty;
+  var specialtyCost= 8 * this.specialty;
 
   if(this.size === "medium") {
     var sizeCost = (price + 3);
@@ -39,32 +39,61 @@ Pizza.prototype.totalCost = function () {
     var sizeCost = price;
   }
 
-  var pizzaCost = sizeCost + toppingCost + specialtyCost;
-  return pizzaCost * this.quantity;
+  var pizzaTotal = sizeCost + toppingCost + veggiesCost;
+  return pizzaTotal * this.quantity;
+
+  var specialtyTotal= specialtyCost + sizeCost;
+  return specialtyTotal * this.quantity;
+
+  var combinationTotal = pizzaTotal + specialtyTotal;
+  retun combinationTotal * this.quantity;
+
 };
 
   function resetFields() {
-    $("input#new-specialty").attr("checked", false);
-    $("input#new-size").attr("checked", false);
-    $("input#new-sauce").attr("checked", false);
-    $("input#new-toppings").attr("checked", false);
-
-  }
-
-$(function() {
-  $("form#new-contact").submit(function(event) {
-    event.preventDefault();
-
-    var inputtedFirstName = $("input#new-first-name").val();
-    var inputtedLastName = $("input#new-last-name").val();
-
-    var newContact = new Contact(inputtedFirstName, inputtedLastName);
-
     $("input#new-first-name").val("");
     $("input#new-last-name").val("");
     $("input.new-street").val("");
     $("input.new-city").val("");
     $("input.new-state").val("");
+    $("input.new-zip").val("");
+    $("input[name=specialty]").attr("checked", false);
+    $("input[name=size]").attr("checked", false);
+    $("input[name=sauce]").attr("checked", false);
+    $("input[name=topping]").attr("checked", false);
+    $("input[name=veggieToppings]").attr("checked", false);
+    $("input.quantity").val("");
+    $("input[name=carry/deliver]").attr("checked", false);
+  }
+
+$(function() {
+  $(".form-group").submit(function(event) {
+    event.preventDefault();
+
+    var inputtedFirstName = $("input#new-first-name").val().toUpperCase();
+    var inputtedLastName = $("input#new-last-name").val().toUpperCase();
+
+    var newContact = new Customer(inputtedFirstName, inputtedLastName);
+
+    $(".new-address").each(function() {
+      var inputtedStreet = $(this).find("input.new-street").val();
+      var inputtedCity = $(this).find("input.new-city").val();
+      var inputtedState = $(this).find("input.new-state").val();
+      var inputtedZip = $(this).find("input.new-zip").val();
+      var newAddress = new Address (inputtedStreet, inputtedCity, inputtedStreet);
+      newContact.addresses.push(newAddress);
+    });
+
+    var inputSpecialty = $("input[name=specialty]:checked").length;
+    var inputSize = $("input[name=size]:checked").val();
+    var inputToppings = $("input[name=toppings]:checked").length;
+    var inputVeggieToppings = $("input[name=veggieToppings]:checked").length;
+    var inputQuantity = $("input.quantity").val();
+
+
+
+
+
   $("#clickOrder").click(function() {
     $(".About").hide();
   });
