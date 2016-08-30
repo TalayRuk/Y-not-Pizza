@@ -19,7 +19,8 @@ _**By Vichitra Pool (Note) on August 26th, 2016_
 |Allow user to input name in uppercase letters, the output will be uppercase | ADAM | ADAM
 |Allow user to input name in lowercase letters, the output will be uppercase| adam | ADAM
 |Do not allow user to input any number | 1 | Please do not enter number!
-
+|If user forgot to enter their name or/and address | | "DON'T FORGET TO ENTER YOUR NAME"
+|If user forgot to enter address | | "PLEASE ENTER YOUR INFORMATION CORRECTLY"
 |When user select the size of pizza, it will show base price per pizza's size | 10" Small | $12.00
 |When user select the size of pizza, it will show base price per pizza's size | 14" Medium | $15.00
 |When user select the size of pizza, it will show base price per pizza's size | 18" Large | $18.00
