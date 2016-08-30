@@ -19,14 +19,12 @@ _**By Vichitra Pool (Note) on August 26th, 2016_
 |Allow user to input name in uppercase letters, the output will be uppercase | ADAM | ADAM
 |Allow user to input name in lowercase letters, the output will be uppercase| adam | ADAM
 |Do not allow user to input any number | 1 | Please do not enter number!
-|User ask to enter phone number when select pick up | pick up | alert box for phone number
-|When user choose delivery option, this will add and show delivery charge of $5.00 to the order | delivery | add $5.00 charge
-|User ask to enter phone number and address when select delivery | pick up | alert box for user to input phone number and address.
-|When user select the size of pizza, it will show base price per pizza's size | 10" Single | $12.00
-|When user select the size of pizza, it will show base price per pizza's size | 14" Couple | $15.00
-|When user select the size of pizza, it will show base price per pizza's size | 18" family of 4 | $18.00
+
+|When user select the size of pizza, it will show base price per pizza's size | 10" Small | $12.00
+|When user select the size of pizza, it will show base price per pizza's size | 14" Medium | $15.00
+|When user select the size of pizza, it will show base price per pizza's size | 18" Large | $18.00
 |When user select pizza's topping, the price of $1.00 will be added for each topping | pepperoni | add $1.00
-|When user select the type of specialty pizza, the price will show base on the size | a small Thai pizza | $15.00
+|When user select the type of specialty pizza, the price will show base on the size and added $8.00| a small Thai pizza | $20.00
 |When user choose the quantity of pizza, the total price will show | 1 | Total $12.00
 
 ## Setup/Installation Requirements
