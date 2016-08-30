@@ -39,14 +39,8 @@ Pizza.prototype.totalCost = function () {
     var sizeCost = price;
   }
 
-  var pizzaTotal = sizeCost + toppingCost + veggiesCost;
+  var pizzaTotal = specialtyCost + sizeCost + toppingCost + veggiesCost;
   return pizzaTotal * this.quantity;
-
-  var specialtyTotal= specialtyCost + sizeCost;
-  return specialtyTotal * this.quantity;
-
-  var combinationTotal = pizzaTotal + specialtyTotal;
-  retun combinationTotal * this.quantity;
 
 };
 
@@ -96,5 +90,6 @@ $(function() {
 
   $("#clickOrder").click(function() {
     $(".About").hide();
+    resetFields();
   });
 });
