@@ -16,6 +16,10 @@ Customer.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }
 
+Address.prototype.fullAddress = function() {
+  return this.street + ", "+ this.city + " " + this.state + " "+ this.zip;
+}
+
 Customer.prototype.checkCustomerName = function() {
   if(!this.firstName||!this.lastName) return false;
   else return true;
@@ -106,15 +110,15 @@ console.log(what);
     var inputQuantity = parseInt($("input.quantity").val());
     var addPizza = new Pizza(inputSpecialty, inputSize, inputToppings, inputVeggieToppings, inputQuantity);
 
-    // $("ul#customer").append("<li><span class='customer'>" + newCustomer.fullName() + "</span></li>");
-    //
-    //   $(".customer").last().click(function() {
-    //     // $("#customer").empty();
-    //     $("#show-info").show();
-    //     $("#show-info h2").text(newCustomer.fullName());
-    //     $(".first-name").text(newContact.firstName);
-    //     $(".last-name").text(newContact.lastName);
-    //     $("ul#addresses").text("");
+    $("ul#customer").append("<li><span class='customer'>" + newCustomer.fullName() + "</span></li>");
+    
+      $(".customer").last().click(function() {
+        // $("#customer").empty();
+        $("#show-info").show();
+        $("#show-info h2").text(newCustomer.fullName());
+        $(".first-name").text(newContact.firstName);
+        $(".last-name").text(newContact.lastName);
+        $("ul#addresses").text("");
         $(".total").text(addPizza.totalcost());
         $("h4").show();
       });
