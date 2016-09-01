@@ -73,9 +73,10 @@ $(function() {
     $(".page1").hide();
     $(".page2").show();
   });
-  $("#order").click(function() {
-  // $("#order").submit(function(event) {
-  //   event.preventDefault();
+  // $("#order").click(function() {
+
+  $("form#new-customer #order").submit(function(event) {
+    event.preventDefault();
 
     var inputtedFirstName = $("input#new-first-name").val().toUpperCase();
     var inputtedLastName = $("input#new-last-name").val().toUpperCase();
@@ -108,7 +109,7 @@ $(function() {
     $("ul#customer").append("<li>" + newCustomer.fullName() + "</li>");
     $("ul#addresses").append("<li>" + newAddress.fullAddress() + "</li>")
     $(".total").text("  $" + addPizza.totalCost() + ".00  ");
-    $(".totalPrice").empty();
-      resetFields();
+
+      // resetFields();
   });
 });
