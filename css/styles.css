@@ -84,3 +84,6 @@ body {
   color: black;
   background-color: yellow;
 }
+.totalPrice ul {
+  list-style-image:none;
+}
