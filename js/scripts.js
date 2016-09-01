@@ -87,6 +87,7 @@ $(function() {
 
     if(!newCustomer.checkCustomerName()) {
       $("#warning1").text("DON'T FORGET TO ENTER YOUR NAME");
+
     }
     if(!newAddress.checkCustomerAddress()) {
       $("#warning2").text("PLEASE ENTER YOUR ADDRESS");
@@ -100,7 +101,7 @@ $(function() {
 
     $("ul#customer").append("<li>" + newCustomer.fullName() + "</li>");
     $("ul#addresses").append("<li>" + newAddress.fullAddress() + "</li>")
-    $(".total").text(addPizza.totalCost());
+    $(".total").text("  $" + addPizza.totalCost() + ".00  ");
 
       resetFields();
   });

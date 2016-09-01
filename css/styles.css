@@ -66,9 +66,21 @@ body {
 }
 #warning1 {
   color: white;
-  background-color: green;
+  text-shadow: 3px 3px black;
 }
 #warning2 {
   color: white;
-  background-color: green;
+  text-shadow: 3px 3px black;
+}
+#customer {
+  color: yellow;
+  font-size: 18px;
+}
+#addresses {
+  color: yellow;
+  font-size: 16px;
+}
+.total {
+  color: black;
+  background-color: yellow;
 }
