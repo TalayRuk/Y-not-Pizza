@@ -106,9 +106,6 @@
             <label for="new-last-name">Last name</label>
             <input type="text" class="form-control" id="new-last-name" >
           </div>
-
-
-
           <div id="new-addresses">
             <div class="new-address">
               <div class="form-group">
@@ -127,9 +124,6 @@
                 <label for="new-zip">Zip Code</label>
                 <input type="number" min=0 class="form-control" id="new-zip">
               </div>
-
-
-
             </div>
           </div>
           <!-- User Info End, Pizza choice start -->
@@ -137,9 +131,8 @@
         <div class="new-pizza">
           <div class="form-group" id="new-specialty">
             <h4>Choose Your Specialty Pizza ($8.00 per pizza): </h4>
-
               <label class="checkbox-inline">
-                <input type="checkbox" name="specialty" checked>Blini Smoked Salmon Pizza
+                <input type="checkbox" name="specialty" >Blini Smoked Salmon Pizza
                 <img src="img/Blini-Pizza.jpg" alt="Salmon Pizza" />
               </label>
               <label class="checkbox-inline">
@@ -158,7 +151,6 @@
                 <input type="checkbox" name="specialty">Rainbow Fruit Dessert Pizza
                 <img src="img/Dessert-Pizza.jpg" alt="dessert pizza" />
               </label>
-
           </div>
         </div>
       </div>
@@ -169,7 +161,7 @@
               <h4>Choose Your Size:</h4>
               <div class="radio-inline">
                 <label>
-                  <input type="radio" name="size" value="small" checked >10" Small $12.00
+                  <input type="radio" name="size" value="small" >10" Small $12.00
                 </label>
               </div>
               <div class="radio-inline">
@@ -185,7 +177,6 @@
             </div>
             <div class="form-group" id="new-sauce">
               <h4>Choose Your Sauce (No extra charge)</h4>
-
                 <label class="checkbox-inline" for="marinara">
                   <input type="checkbox" name="sauce" value="0">Marinara
                 </label>
@@ -195,7 +186,6 @@
                 <label class="checkbox-inline" for="spicy">
                   <input type="checkbox" name="sauce" value="0">Spicy
                 </label>
-
             </div>
             <div class="form-group" id="new-toppings">
               <h4>Choose Your Topping ($1.00 per Topping)</h4>
@@ -218,7 +208,6 @@
                 <label class="checkbox-inline" for="blue-cheese">
                   <input type="checkbox" name="toppings" value="1">Blue Cheese
                 </label>
-
             </div>
             <div class="form-group" id="new-veggieToppings">
               <h4>Choose Your Topping ($1.00 per Topping)</h4>
@@ -244,12 +233,10 @@
                   <input type="checkbox" name="veggiesToppings" value="1">Basil
                 </label>
             </div>
-
-                <div class="form-group">
-                  <label for="quantity"><h4>Pizza Quantity: </h4></label>
-                  <input type="number" min=1 class="form-control quantity" placeholder="Please enter equal or more than 1">
-                </div>
-
+            <div class="form-group">
+              <label for="quantity"><h4>Pizza Quantity: </h4></label>
+              <input type="number" min=1 class="form-control quantity" placeholder="Please enter equal or more than 1">
+            </div>
             <div class="form-group" id="new-getOrder">
               <h4>Choose one Opton:</h4>
               <div class="radio-inline">
@@ -259,67 +246,38 @@
               </div>
               <div class="radio-inline">
                 <label>
-                  <input type="radio" name="carry-deliver"  value="0">Free Delivery (Please Tip the Driver!)
+                  <input type="radio" name="carry-deliver"  value="0"checked>Free Delivery (Please Tip the Driver!)
                 </label>
               </div>
             </div>
           </div>
         </div>
-
-        <button type="button" class="btn btn-primary btn-lg" id="order">Order</button>
+        <button type="submit" class="btn btn-primary btn-lg" id="order">Order</button>
         </form>
 
         <div class="totalPrice">
           <h2>Customer Order Detail: </h2>
-          <p id="warning1">
-          </p>
-          <p id="warning2">
-          </p>
+          <br>
+          <h4 id="warning1"></h4>
+          <br>
           <ul id="customer">
 
           </ul>
-        <div id="show-info">
-           <h2></h2>
-           <p> Address:</p>
-           <ul id="addresses">
+          <br>
+          <h3> Address:</h3>
+          <br>
+          <h4 id="warning2"></h4>
+          <br>
+          <ul id="addresses">
 
-           </ul>
-           <h4>Here's the total price for your pizza $ <span class="total"></span></h4>
-           <br>
-           <h4>Enjoy! and Thank you for your business.</h4>
+          </ul>
+          <br>
+          <h4>Here's the total price for your pizza <span class="total"> </span></h4>
+          <br>
+          <h4>Enjoy! and Thank you for your business.</h4>
          </div>
         </div>
     </div>
   </div>
   </body>
 </html>
-
-
-
-  <!-- <div class="Menu">
-    <img src="pizza-menu" alt="menu" />
-  </div>
-
-  <div class="About">
-    <h2>About Us</h2>
-    <h4>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </h4>
-    <h4>
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </h4>
-    <h4>
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    </h4>
-    <h4>
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </h4>
-    <br>
-    <h4>Questions or Comments are always welcome</h4>
-    <br>
-    <h4>Come visit us at 123 4th Ave, Pizza, Pizza USA 91123</h4>
-    <h4>Hours: Open Mon - Sun: 11AM - MIDNIGHT</h4>
-    <h4>Call us 1800 Y-notPizza!</h4>
-    <h4>email: YnotPizza!@pizzaco.com</h4>
-    <h5>#YnotPizza</h5>
-  </div>
