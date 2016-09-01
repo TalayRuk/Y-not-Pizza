@@ -33,7 +33,7 @@ function Pizza(specialty, size, toppings, veggiesToppings, quantity) {
   this.price = 0;
 }
 Pizza.prototype.checkSelected = function() {
-  if(!this.specialty||this.size||this.toppings||this.veggiesToppings||this.quantity) return false;
+  if(!this.size&&this.toppings||this.veggiesToppings&&this.quantity||this.specialty) return false;
   else return true;
 }
 Pizza.prototype.totalCost = function () {
@@ -73,10 +73,10 @@ $(function() {
     $(".page1").hide();
     $(".page2").show();
   });
-  // $("#order").click(function() {
 
   $("form#new-customer #order").submit(function(event) {
     event.preventDefault();
+
 
     var inputtedFirstName = $("input#new-first-name").val().toUpperCase();
     var inputtedLastName = $("input#new-last-name").val().toUpperCase();
