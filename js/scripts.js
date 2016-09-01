@@ -87,11 +87,9 @@ $(function() {
 
     if(!newCustomer.checkCustomerName()) {
       $("#warning1").text("DON'T FORGET TO ENTER YOUR NAME");
-
     }
     if(!newAddress.checkCustomerAddress()) {
       $("#warning2").text("PLEASE ENTER YOUR ADDRESS");
-
     }
     var inputSpecialty = $("input[name=specialty]:checked").length;
     var inputSize = $("input[name=size]:checked").val();

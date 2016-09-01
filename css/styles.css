@@ -1,80 +1,74 @@
 body {
   background-color: #9d2a00;
 }
-
 .navbar {
   margin-bottom: 0;
 }
-
 .navbar-brand {
   font-weight: 600;
   color: green;
 }
-
 .carousel-inner img {
   width: 100%;
   height: 10%;
 }
-
 .carousel-inner h2 {
   color: white;
   text-shadow: 2px 2px black;
   font-stretch: ultra-expanded;
 }
-
 .page-header {
   text-align: center;
   color: white;
 }
-
 .change-color {
   color: black;
 }
-
 .page2 {
   display:none;
   color: black;
   text-align: center;
 }
-
 .jumbotron {
   padding: 0px;
   margin: 5px;
 }
-
 .jumbotron img {
   height: 15%;
   width: 100%;
 }
-
 .row {
   color: black;
   margin: 20px;
 }
-
 .form-group {
   color: black;
   text-align: center;
   font-size: 18px;
   background-color: #FBEC5D;
 }
-
 .form-group h4 {
   padding: 10px;
   font-weight: bolder;
   text-shadow: 2px 2px white;
 }
-
 .col-header {
   margin-top: 43px;
 }
 .radio-inline {
   font-size: 16px;
 }
-
 .checkbox-inline img {
   width: 35%;
   padding: 10px;
   text-align: center;
   align-items: center;
+}
+#warning1 {
+  color: white;
+  background-color: green;
+}
+#warning2 {
+  color: white;
+  background-color: green;
 }
