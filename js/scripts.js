@@ -108,7 +108,7 @@ $(function() {
     $("ul#customer").append("<li>" + newCustomer.fullName() + "</li>");
     $("ul#addresses").append("<li>" + newAddress.fullAddress() + "</li>")
     $(".total").text("  $" + addPizza.totalCost() + ".00  ");
-    $("#customer, #addresses").empty();
+    $(".totalPrice").empty();
       resetFields();
   });
 });
