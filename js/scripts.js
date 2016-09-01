@@ -111,9 +111,9 @@ console.log(what);
     var addPizza = new Pizza(inputSpecialty, inputSize, inputToppings, inputVeggieToppings, inputQuantity);
 
     $("ul#customer").append("<li><span class='customer'>" + newCustomer.fullName() + "</span></li>");
-    
+
       $(".customer").last().click(function() {
-        // $("#customer").empty();
+        $("#customer").empty();
         $("#show-info").show();
         $("#show-info h2").text(newCustomer.fullName());
         $(".first-name").text(newContact.firstName);
