@@ -32,6 +32,10 @@ function Pizza(specialty, size, toppings, veggiesToppings, quantity) {
   this.quantity = quantity;
   this.price = 0;
 }
+Pizza.prototype.checkSelected = function() {
+  if(!this.specialty||this.size||this.toppings||this.veggiesToppings||this.quantity) return false;
+  else return true;
+}
 Pizza.prototype.totalCost = function () {
   var price = 12
   var toppingCost= 1 * this.toppings;
@@ -70,6 +74,7 @@ $(function() {
     $(".page2").show();
   });
   $("#order").click(function() {
+    // (".totalPrice").empty();
   // $("#order").submit(function(event) {
   //   event.preventDefault();
 
@@ -87,18 +92,20 @@ $(function() {
 
     if(!newCustomer.checkCustomerName()) {
       $("#warning1").text("DON'T FORGET TO ENTER YOUR NAME");
-
     }
     if(!newAddress.checkCustomerAddress()) {
       $("#warning2").text("PLEASE ENTER YOUR ADDRESS");
     }
+
     var inputSpecialty = $("input[name=specialty]:checked").length;
     var inputSize = $("input[name=size]:checked").val();
     var inputToppings = $("input[name=toppings]:checked").length;
     var inputVeggieToppings = $("input[name=veggieToppings]:checked").length;
     var inputQuantity = parseInt($("input.quantity").val());
     var addPizza = new Pizza(inputSpecialty, inputSize, inputToppings, inputVeggieToppings, inputQuantity);
-
+    if(!addPizza.checkSelected()) {
+      alert("Please select specialty pizza, size, or create your own toppings, and quantity!")
+    }
     $("ul#customer").append("<li>" + newCustomer.fullName() + "</li>");
     $("ul#addresses").append("<li>" + newAddress.fullAddress() + "</li>")
     $(".total").text("  $" + addPizza.totalCost() + ".00  ");
