@@ -98,39 +98,26 @@ $(function() {
 
     console.log(newCustomer);
 
-    // $(".new-address").each(function() {
-    //   var inputtedStreet = $(this).find("input.new-street").val();
-    //   var inputtedCity = $(this).find("input.new-city").val();
-    //   var inputtedState = $(this).find("input.new-state").val();
-    //   var inputtedZip = $(this).find("input.new-zip").val();
-    //   var newAddress = new Address (inputtedStreet, inputtedCity, inputtedStreet);
-    //   newCustomer.addresses.push(newAddress);
-    // });
+
     if(!newCustomer.checkCustomerName()) {
       $("p .warning").text("DON'T FORGET TO ENTER YOUR NAME");
     }
 
-//     if(!newAddress.checkCustomerAddress()) {
-//       $("p #warning").text("PLEASE ENTER CORRECT INFORMATION");
-//     }
-// console.log(what);
-//     var inputSpecialty = $("input[name=specialty]:checked").length;
-//     var inputSize = $("input[name=size]:checked").val();
-//     var inputToppings = $("input[name=toppings]:checked").length;
-//     var inputVeggieToppings = $("input[name=veggieToppings]:checked").length;
-//     var inputQuantity = parseInt($("input.quantity").val());
-//     var addPizza = new Pizza(inputSpecialty, inputSize, inputToppings, inputVeggieToppings, inputQuantity);
+    if(!newAddress.checkCustomerAddress()) {
+      $("p #warning").text("PLEASE ENTER CORRECT INFORMATION");
+    }
+
+    var inputSpecialty = $("input[name=specialty]:checked").length;
+    var inputSize = $("input[name=size]:checked").val();
+    var inputToppings = $("input[name=toppings]:checked").length;
+    var inputVeggieToppings = $("input[name=veggieToppings]:checked").length;
+    var inputQuantity = parseInt($("input.quantity").val());
+    var addPizza = new Pizza(inputSpecialty, inputSize, inputToppings, inputVeggieToppings, inputQuantity);
 
     $("ul#customer").append("<li>" + newCustomer.fullName() + "</li>");
     $("ul#addresses").append("<li>" + newAddress.fullAddress() + "</li>")
-      // $(".customer").last().click(function() {
-      //   $("#customer").empty();
-      //   $("#show-info").show();
-      //   $("#show-info h2").text(newCustomer.fullName());
-      //   $(".first-name").text(newCustomer.firstName);
-      //   $(".last-name").text(newCustomer.lastName);
-      //   $("ul#addresses").text("");
-      //   $(".total").text(addPizza.totalcost());
+    $(".total").text(addPizza.totalCost());
+
       //   $("h4").show();
       // });
       // resetFields();
