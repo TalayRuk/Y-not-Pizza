@@ -30,9 +30,12 @@ body {
 .change-color {
   color: black;
 }
+.page1 {
+  display:none;
+
+}
 
 .page2 {
-  display:none;
   color: black;
   text-align: center;
 }
