@@ -33,7 +33,7 @@ function Pizza(specialty, size, toppings, veggiesToppings, quantity) {
   this.price = 0;
 }
 Pizza.prototype.checkSelected = function() {
-  if(!this.size&&this.toppings||this.veggiesToppings&&this.quantity||this.specialty) return false;
+  if(!this.specialty||this.size||this.toppings||this.veggiesToppings||this.quantity) return false;
   else return true;
 }
 Pizza.prototype.totalCost = function () {
@@ -74,9 +74,8 @@ $(function() {
     $(".page2").show();
   });
 
-  $("form#new-customer #order").submit(function(event) {
+  $(".page2 form").submit(function(event) {
     event.preventDefault();
-
 
     var inputtedFirstName = $("input#new-first-name").val().toUpperCase();
     var inputtedLastName = $("input#new-last-name").val().toUpperCase();
@@ -96,7 +95,6 @@ $(function() {
     if(!newAddress.checkCustomerAddress()) {
       $("#warning2").text("PLEASE ENTER YOUR ADDRESS");
     }
-
     var inputSpecialty = $("input[name=specialty]:checked").length;
     var inputSize = $("input[name=size]:checked").val();
     var inputToppings = $("input[name=toppings]:checked").length;
@@ -110,6 +108,6 @@ $(function() {
     $("ul#addresses").append("<li>" + newAddress.fullAddress() + "</li>")
     $(".total").text("  $" + addPizza.totalCost() + ".00  ");
 
-      // resetFields();
+      resetFields();
   });
 });
