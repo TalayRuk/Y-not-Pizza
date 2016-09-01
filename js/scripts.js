@@ -86,12 +86,12 @@ $(function() {
     newCustomer.addresses.push(newAddress);
 
     if(!newCustomer.checkCustomerName()) {
-      $("p #warning1").text("DON'T FORGET TO ENTER YOUR NAME");
-      alert("enter ur name");
+      $("#warning1").text("DON'T FORGET TO ENTER YOUR NAME");
+
     }
     if(!newAddress.checkCustomerAddress()) {
-      $("p #warning2").text("PLEASE ENTER CORRECT INFORMATION");
-      alert("enter ur address");
+      $("#warning2").text("PLEASE ENTER YOUR ADDRESS");
+
     }
     var inputSpecialty = $("input[name=specialty]:checked").length;
     var inputSize = $("input[name=size]:checked").val();
