@@ -100,11 +100,11 @@
         <form id="new-customer">
           <div class="form-group">
                 <label for="new-first-name">First name</label>
-                <input type="text" class="form-control" id="new-first-name">
+                <input type="text" class="form-control" id="new-first-name" value="TEST VALUE">
           </div>
           <div class="form-group">
             <label for="new-last-name">Last name</label>
-            <input type="text" class="form-control" id="new-last-name">
+            <input type="text" class="form-control" id="new-last-name" value="TEST VALUE">
           </div>
           <p class="warning">
 
@@ -113,19 +113,19 @@
             <div class="new-address">
               <div class="form-group">
                 <label for="new-street">Street</label>
-                <input type="text" class="form-control new-street">
+                <input type="text" class="form-control" id="new-street" value="TEST VALUE">
               </div>
               <div class="form-group">
                 <label for="new-city">City</label>
-                <input type="text" class="form-control new-city">
+                <input type="text" class="form-control" id="new-city" value="TEST VALUE">
               </div>
               <div class="form-group">
                 <label for="new-state">State</label>
-                <input type="text" class="form-control new-state">
+                <input type="text" class="form-control" id="new-state" value="TEST VALUE">
               </div>
               <div class="form-group">
                 <label for="new-zip">Zip Code</label>
-                <input type="number" min=0 class="form-control new-zip">
+                <input type="number" min=0 class="form-control" id="new-zip" value="1">
               </div>
                 <p id="warning">
 
@@ -137,7 +137,7 @@
         <div class="new-pizza">
           <div class="form-group" id="new-specialty">
             <h4>Choose Your Specialty Pizza ($8.00 per pizza): </h4>
-            <form >
+
               <label class="checkbox-inline">
                 <input type="checkbox" name="specialty">Blini Smoked Salmon Pizza
                 <img src="img/Blini-Pizza.jpg" alt="Salmon Pizza" />
@@ -158,7 +158,7 @@
                 <input type="checkbox" name="specialty">Rainbow Fruit Dessert Pizza
                 <img src="img/Dessert-Pizza.jpg" alt="dessert pizza" />
               </label>
-            </form>
+
           </div>
         </div>
       </div>
@@ -185,7 +185,7 @@
             </div>
             <div class="form-group" id="new-sauce">
               <h4>Choose Your Sauce (No extra charge)</h4>
-              <form>
+
                 <label class="checkbox-inline" for="marinara">
                   <input type="checkbox" name="sauce" value="0">Marinara
                 </label>
@@ -195,7 +195,7 @@
                 <label class="checkbox-inline" for="spicy">
                   <input type="checkbox" name="sauce" value="0">Spicy
                 </label>
-              </form>
+
             </div>
             <div class="form-group" id="new-toppings">
               <h4>Choose Your Topping ($1.00 per Topping)</h4>
@@ -218,7 +218,7 @@
                 <label class="checkbox-inline" for="blue-cheese">
                   <input type="checkbox" name="toppings" value="1">Blue Cheese
                 </label>
-              </form>
+
             </div>
             <div class="form-group" id="new-veggieToppings">
               <h4>Choose Your Topping ($1.00 per Topping)</h4>
@@ -244,12 +244,12 @@
                   <input type="checkbox" name="veggiesToppings" value="1">Basil
                 </label>
             </div>
-              <form>
+
                 <div class="form-group">
                   <label for="quantity"><h4>Pizza Quantity: </h4></label>
                   <input type="number" min=1 class="form-control quantity" placeholder="Please enter equal or more than 1">
                 </div>
-              </form>
+
             <div class="form-group" id="new-getOrder">
               <h4>Choose one Opton:</h4>
               <div class="radio-inline">
@@ -266,7 +266,7 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-lg" id="order">Order</button>
+        <button type="button" class="btn btn-primary btn-lg" id="order">Order</button>
         </form>
 
         <div class="totalPrice">

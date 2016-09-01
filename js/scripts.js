@@ -57,21 +57,21 @@ Pizza.prototype.totalCost = function () {
 
 };
 
-  function resetFields() {
-    $("input#new-first-name").val("");
-    $("input#new-last-name").val("");
-    $("input.new-street").val("");
-    $("input.new-city").val("");
-    $("input.new-state").val("");
-    $("input.new-zip").val("");
-    $("input[name=specialty]").attr("checked", false);
-    $("input[name=size]").attr("checked", false);
-    $("input[name=sauce]").attr("checked", false);
-    $("input[name=topping]").attr("checked", false);
-    $("input[name=veggieToppings]").attr("checked", false);
-    $("input.quantity").val("");
-    $("input[name=carry-deliver]").attr("checked", false);
-  }
+  // function resetFields() {
+  //   $("input#new-first-name").val("");
+  //   $("input#new-last-name").val("");
+    // $("input.new-street").val("");
+    // $("input.new-city").val("");
+    // $("input.new-state").val("");
+    // $("input.new-zip").val("");
+    // $("input[name=specialty]").attr("checked", false);
+    // $("input[name=size]").attr("checked", false);
+    // $("input[name=sauce]").attr("checked", false);
+    // $("input[name=topping]").attr("checked", false);
+    // $("input[name=veggieToppings]").attr("checked", false);
+    // $("input.quantity").val("");
+    // $("input[name=carry-deliver]").attr("checked", false);
+  // }
 // user logic
 $(function() {
   $("#hungry").click(function(){
@@ -79,49 +79,60 @@ $(function() {
     $(".page2").show();
   });
 
-  $("form#order").submit(function(event) {
-    event.preventDefault();
-    console.log("o my god");
+  $("#order").click(function() {
+  // $("#order").submit(function(event) {
+  //   event.preventDefault();
+
     var inputtedFirstName = $("input#new-first-name").val().toUpperCase();
     var inputtedLastName = $("input#new-last-name").val().toUpperCase();
 
-    var newCustomer = new Customer(inputtedFirstName, inputtedLastName);
 
-    $(".new-address").each(function() {
-      var inputtedStreet = $(this).find("input.new-street").val();
-      var inputtedCity = $(this).find("input.new-city").val();
-      var inputtedState = $(this).find("input.new-state").val();
-      var inputtedZip = $(this).find("input.new-zip").val();
-      var newAddress = new Address (inputtedStreet, inputtedCity, inputtedStreet);
-      newCustomer.addresses.push(newAddress);
-    });
+    var inputtedStreet = $("#new-street").val();
+    var inputtedCity = $("#new-city").val();
+    var inputtedState = $("#new-state").val();
+    var inputtedZip = parseInt($("#new-zip").val());
+    var newAddress = new Address (inputtedStreet, inputtedCity, inputtedStreet, inputtedZip);
+
+    var newCustomer = new Customer(inputtedFirstName, inputtedLastName);
+    newCustomer.addresses.push(newAddress);
+
+    console.log(newCustomer);
+
+    // $(".new-address").each(function() {
+    //   var inputtedStreet = $(this).find("input.new-street").val();
+    //   var inputtedCity = $(this).find("input.new-city").val();
+    //   var inputtedState = $(this).find("input.new-state").val();
+    //   var inputtedZip = $(this).find("input.new-zip").val();
+    //   var newAddress = new Address (inputtedStreet, inputtedCity, inputtedStreet);
+    //   newCustomer.addresses.push(newAddress);
+    // });
     if(!newCustomer.checkCustomerName()) {
       $("p .warning").text("DON'T FORGET TO ENTER YOUR NAME");
     }
-console.log(yes);
-    if(!newAddress.checkCustomerAddress()) {
-      $("p #warning").text("PLEASE ENTER CORRECT INFORMATION");
-    }
-console.log(what);
-    var inputSpecialty = $("input[name=specialty]:checked").length;
-    var inputSize = $("input[name=size]:checked").val();
-    var inputToppings = $("input[name=toppings]:checked").length;
-    var inputVeggieToppings = $("input[name=veggieToppings]:checked").length;
-    var inputQuantity = parseInt($("input.quantity").val());
-    var addPizza = new Pizza(inputSpecialty, inputSize, inputToppings, inputVeggieToppings, inputQuantity);
 
-    $("ul#customer").append("<li><span class='customer'>" + newCustomer.fullName() + "</span></li>");
-    
-      $(".customer").last().click(function() {
-        // $("#customer").empty();
-        $("#show-info").show();
-        $("#show-info h2").text(newCustomer.fullName());
-        $(".first-name").text(newContact.firstName);
-        $(".last-name").text(newContact.lastName);
-        $("ul#addresses").text("");
-        $(".total").text(addPizza.totalcost());
-        $("h4").show();
-      });
-      resetFields();
-  // });
+//     if(!newAddress.checkCustomerAddress()) {
+//       $("p #warning").text("PLEASE ENTER CORRECT INFORMATION");
+//     }
+// console.log(what);
+//     var inputSpecialty = $("input[name=specialty]:checked").length;
+//     var inputSize = $("input[name=size]:checked").val();
+//     var inputToppings = $("input[name=toppings]:checked").length;
+//     var inputVeggieToppings = $("input[name=veggieToppings]:checked").length;
+//     var inputQuantity = parseInt($("input.quantity").val());
+//     var addPizza = new Pizza(inputSpecialty, inputSize, inputToppings, inputVeggieToppings, inputQuantity);
+
+    $("ul#customer").append("<li>" + newCustomer.fullName() + "</li>");
+    $("ul#addresses").append("<li>" + newAddress.fullAddress() + "</li>")
+      // $(".customer").last().click(function() {
+      //   $("#customer").empty();
+      //   $("#show-info").show();
+      //   $("#show-info h2").text(newCustomer.fullName());
+      //   $(".first-name").text(newCustomer.firstName);
+      //   $(".last-name").text(newCustomer.lastName);
+      //   $("ul#addresses").text("");
+      //   $(".total").text(addPizza.totalcost());
+      //   $("h4").show();
+      // });
+      // resetFields();
+  });
 });
