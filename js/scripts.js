@@ -74,7 +74,6 @@ $(function() {
     $(".page2").show();
   });
   $("#order").click(function() {
-    // (".totalPrice").empty();
   // $("#order").submit(function(event) {
   //   event.preventDefault();
 
@@ -109,7 +108,7 @@ $(function() {
     $("ul#customer").append("<li>" + newCustomer.fullName() + "</li>");
     $("ul#addresses").append("<li>" + newAddress.fullAddress() + "</li>")
     $(".total").text("  $" + addPizza.totalCost() + ".00  ");
-
+    $("#customer, #addresses").empty();
       resetFields();
   });
 });
