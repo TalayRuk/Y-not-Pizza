@@ -32,8 +32,12 @@ function Pizza(specialty, size, toppings, veggiesToppings, quantity) {
   this.quantity = quantity;
   this.price = 0;
 }
-Pizza.prototype.checkSelected = function() {
+Pizza.prototype.checkSelectedsize = function() {
   if(!this.size||!this.quantity) return false;
+  else return true;
+}
+Pizza.prototype.checkSelectedtop = function() {
+  if(!this.topping) return false;
   else return true;
 }
 Pizza.prototype.totalCost = function () {
@@ -101,8 +105,11 @@ $(function() {
     var inputVeggieToppings = $("input[name=veggieToppings]:checked").length;
     var inputQuantity = parseInt($("input.quantity").val());
     var addPizza = new Pizza(inputSpecialty, inputSize, inputToppings, inputVeggieToppings, inputQuantity);
-    if(!addPizza.checkSelected()) {
+    if(!addPizza.checkSelectedsize()) {
       alert("Please select Pizza's size and Quantity!")
+    }
+    if(!addPizza.checkSelectedtop()) {
+      alert("Please select specialty or Pizza's toppings !")
     }
     $("ul#customer").append("<li>" + newCustomer.fullName() + "</li>");
     $("ul#addresses").append("<li>" + newAddress.fullAddress() + "</li>")
