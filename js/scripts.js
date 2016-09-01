@@ -27,6 +27,7 @@ Address.prototype.checkCustomerAddress = function() {
 function Pizza(specialty, size, toppings, veggiesToppings, quantity) {
   this.specialty = specialty;
   this.size = size;
+  this.sauce = sauce;
   this.toppings = toppings;
   this.veggiesToppings = veggiesToppings;
   this.quantity = quantity;
@@ -106,7 +107,7 @@ $(function() {
     var inputQuantity = parseInt($("input.quantity").val());
     var addPizza = new Pizza(inputSpecialty, inputSize, inputToppings, inputVeggieToppings, inputQuantity);
     if(!addPizza.checkSelectedsize()) {
-      alert("Please select Pizza's size and Quantity!")
+      alert("Please select Pizza's size, sauce and Quantity!")
     }
     if(!addPizza.checkSelectedtop()) {
       alert("Please select specialty or Pizza's toppings !")
