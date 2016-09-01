@@ -21,6 +21,7 @@ _**By Vichitra Pool (Note) on August 26th, 2016_
 |Do not allow user to input any number | 1 | Please do not enter number!
 |If user forgot to enter their name or/and address | | "DON'T FORGET TO ENTER YOUR NAME"
 |If user forgot to enter address | | "PLEASE ENTER YOUR INFORMATION CORRECTLY"
+|If none of the pizza's choices are selected| | "PLEASE SELECT PIZZA"
 |When user select the type of specialty pizza, the price will be added $8.00|  Thai pizza | $8.00
 |When user select the size of pizza, it will add to base price depending on pizza's size | 10" Small | $12.00
 |When user select the size of pizza, it will add to base price depending on pizza's size | 14" Medium | $15.00
