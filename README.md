@@ -36,19 +36,11 @@ _**By Vichitra Pool (Note) on August 26th, 2016_
 ## Known Bugsadd tone_
 
 ## Support and contact details
-_Contact me at vjde28@gmail.com_
+_Please contact the authors if you have any questions or comments._
 
 ## Technologies Used
 
-1. HTML
-2. CSS
-3. CASCADING
-4. BOOTSTRAP
-5. JAVASCRIPT
-6. JQUERY
-7. JS: ARRAY & LOOPING
-8. JS: Objectives
-9. JS: Constructor & Prototype
+HTML, CSS, CASCADING, BOOTSTRAP, JAVASCRIPT, JQUERY, JS: ARRAY & LOOPING, JS: Objectives, JS: Constructor & Prototype
 
 ## License
 
